@@ -19,7 +19,7 @@ const HookedCounter:React.FunctionComponent<IProps> = ({ initialCount = 0, initi
 
   React.useEffect(() => {
     alert(`A Count is ${count} now!!`);
-  });
+  }, [count]);
 
   return (
     <div>
