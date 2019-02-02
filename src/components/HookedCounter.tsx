@@ -10,12 +10,16 @@ const HookedCounter:React.FunctionComponent<IProps> = ({ initialCount = 0, initi
   const [word, setWord] = React.useState(initialWord);
 
   const increment = React.useCallback(() => {
-    setCount( prev => prev + 1)
+    setCount(prev => prev + 1)
   }, []);
 
   const handleWordClick = React.useCallback(() => {
-    setWord( prev => `${prev}!`)
+    setWord(prev => `${prev}!`)
   }, []);
+
+  React.useEffect(() => {
+    alert(`A Count is ${count} now!!`);
+  });
 
   return (
     <div>
