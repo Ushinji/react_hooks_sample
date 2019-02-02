@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <Counter initial={1}/>
-        <HookedCounter initial={2} />
+        <HookedCounter initialCount={2} />
       </div>
     );
   }
