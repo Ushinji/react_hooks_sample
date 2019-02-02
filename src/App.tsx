@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Counter from './components/Counter';
+import HookedCounter from './components/HookedCounter';
 
 
 class App extends React.Component {
@@ -7,6 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <Counter initial={1}/>
+        <HookedCounter initial={2} />
       </div>
     );
   }

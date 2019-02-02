@@ -1,7 +1,11 @@
 import * as React from 'react';
 
-const HookedCounter = () => {
-  const [count, setCount] = React.useState(0);
+interface IProps {
+  initial?: number;
+}
+
+const HookedCounter:React.FunctionComponent<IProps> = ({initial = 0}) => {
+  const [count, setCount] = React.useState(initial);
 
   const increment = () => {
     setCount(count + 1)
