@@ -4,11 +4,11 @@ interface IProps {
   initial?: number;
 }
 
-const HookedCounter:React.FunctionComponent<IProps> = ({initial = 0}) => {
+const HookedCounter:React.FunctionComponent<IProps> = ({ initial = 0 }) => {
   const [count, setCount] = React.useState(initial);
 
   const increment = React.useCallback(() => {
-    setCount(count + 1)
+    setCount(prev => prev + 1)
   }, []);
 
   return (
