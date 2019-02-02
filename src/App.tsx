@@ -1,9 +1,11 @@
 import * as React from 'react';
+import Counter from './components/Counter';
+
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">ほげ</div>
+      <Counter initialCount={1}/>
     );
   }
 }
