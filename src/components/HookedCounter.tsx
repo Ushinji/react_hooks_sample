@@ -7,9 +7,9 @@ interface IProps {
 const HookedCounter:React.FunctionComponent<IProps> = ({initial = 0}) => {
   const [count, setCount] = React.useState(initial);
 
-  const increment = () => {
+  const increment = React.useCallback(() => {
     setCount(count + 1)
-  }
+  }, []);
 
   return (
     <div>
@@ -17,7 +17,7 @@ const HookedCounter:React.FunctionComponent<IProps> = ({initial = 0}) => {
       <p>count： {count}</p>
       <button onClick={increment}>＋</button>
     </div>
-    
+
   )
 }
 
