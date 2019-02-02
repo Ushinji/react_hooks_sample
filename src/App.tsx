@@ -5,7 +5,9 @@ import Counter from './components/Counter';
 class App extends React.Component {
   public render() {
     return (
-      <Counter initialCount={1}/>
+      <div>
+        <Counter initial={1}/>
+      </div>
     );
   }
 }

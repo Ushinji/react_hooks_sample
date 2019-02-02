@@ -1,7 +1,7 @@
 import * as React from "react";
 
 interface IProps {
-  initialCount: number;
+  initial: number;
 }
 
 interface IStates {
@@ -13,7 +13,7 @@ class Counter extends React.Component<IProps, IStates> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      count: props.initialCount,
+      count: props.initial,
     };
     this.increment = this.increment.bind(this);
   }
