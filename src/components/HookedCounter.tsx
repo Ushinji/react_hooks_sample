@@ -1,14 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 
 interface IProps {
   initialCount?: number;
   initialWord?: string;
 }
 
-const HookedCounter: React.FunctionComponent<IProps> = ({
-  initialCount = 0,
-  initialWord = "!"
-}) => {
+const HookedCounter: React.FunctionComponent<IProps> = ({ initialCount = 0, initialWord = '!' }) => {
   const [count, setCount] = React.useState(initialCount);
   const [word, setWord] = React.useState(initialWord);
 

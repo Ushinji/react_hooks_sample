@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 interface IProps {
   initial: number;
@@ -12,7 +12,7 @@ class Counter extends React.Component<IProps, IStates> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      count: props.initial
+      count: props.initial,
     };
     this.increment = this.increment.bind(this);
   }
@@ -21,7 +21,7 @@ class Counter extends React.Component<IProps, IStates> {
     const count = this.state.count;
 
     this.setState({
-      count: count + 1
+      count: count + 1,
     });
   }
 

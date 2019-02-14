@@ -1,6 +1,6 @@
-import * as React from "react";
-import Counter from "./components/Counter";
-import HookedCounter from "./components/HookedCounter";
+import * as React from 'react';
+import Counter from './components/Counter';
+import HookedCounter from './components/HookedCounter';
 
 class App extends React.Component {
   public render() {
