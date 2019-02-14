@@ -9,21 +9,20 @@ interface IStates {
 }
 
 class Counter extends React.Component<IProps, IStates> {
-  
   constructor(props: IProps) {
     super(props);
     this.state = {
-      count: props.initial,
+      count: props.initial
     };
     this.increment = this.increment.bind(this);
   }
 
   public increment() {
     const count = this.state.count;
-    
-    this.setState({ 
-      count: count + 1,
-    })
+
+    this.setState({
+      count: count + 1
+    });
   }
 
   public render() {
@@ -33,7 +32,7 @@ class Counter extends React.Component<IProps, IStates> {
         <div>count： {this.state.count}</div>
         <button onClick={this.increment}>＋</button>
       </div>
-    )
+    );
   }
 }
 
