@@ -10,6 +10,9 @@ const RootPage = () => {
       <li>
         <Link to="/hooked_counter">HookedCounter</Link>
       </li>
+      <li>
+        <Link to="/projects">プロジェクト</Link>
+      </li>
     </ul>
   );
 };
