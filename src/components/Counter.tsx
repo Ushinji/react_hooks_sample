@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-interface IProps {
+interface Props {
   initial: number;
 }
 
-interface IStates {
+interface States {
   count: number;
 }
 
-class Counter extends React.Component<IProps, IStates> {
-  constructor(props: IProps) {
+class Counter extends React.Component<Props, States> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       count: props.initial,

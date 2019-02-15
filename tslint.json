@@ -15,6 +15,7 @@
         "trailingComma": "es5"
       }
     ],
-    "variable-name": [true, "allow-pascal-case"]
+    "variable-name": [true, "allow-pascal-case"],
+    "interface-name": [true, "never-prefix"]
   }
 }
