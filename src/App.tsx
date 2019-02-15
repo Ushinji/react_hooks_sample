@@ -1,14 +1,13 @@
 import * as React from 'react';
-import Counter from './components/Counter';
-import HookedCounter from './components/HookedCounter';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 
 class App extends React.Component {
   public render() {
     return (
-      <div>
-        <Counter initial={1} />
-        <HookedCounter initialCount={2} />
-      </div>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     );
   }
 }
