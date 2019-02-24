@@ -1,8 +1,17 @@
 import * as React from 'react';
+import { getProjects } from 'src/ducks/project/operation';
 import { StoreContext } from '../ducks';
 
 const ProjectList: React.FunctionComponent = () => {
-  const { state } = React.useContext(StoreContext);
+  const { state, dispatch } = React.useContext(StoreContext);
+  React.useEffect(() => {
+    getProjects(dispatch);
+  }, []);
+
+  if (!state.projectState.length) {
+    return <div>Now Loading...</div>;
+  }
+
   return (
     <div>
       <h1>プロジェクト一覧</h1>
