@@ -1,3 +1,3 @@
 export enum ActionTypes {
-  SET = 'action/project/SET',
+  INITIALIZE = 'actions/project/INITIALIZE',
 }

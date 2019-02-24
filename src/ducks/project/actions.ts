@@ -2,13 +2,13 @@ import { Action } from '../';
 import { Project } from './reducers';
 import { ActionTypes } from './types';
 
-export type SetProjectAction = Action<ActionTypes.SET, { project: Project }>;
+export type InitializeProjectAction = Action<ActionTypes.INITIALIZE, { projects: Project[] }>;
 
-export const set = (project: Project): SetProjectAction => {
+export const initialize = (projects: Project[]): InitializeProjectAction => {
   return {
-    type: ActionTypes.SET,
-    payload: { project },
+    type: ActionTypes.INITIALIZE,
+    payload: { projects },
   };
 };
 
-export type ProjectActions = SetProjectAction;
+export type ProjectActions = InitializeProjectAction;

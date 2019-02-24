@@ -9,23 +9,12 @@ export interface Project {
   displayName: string;
 }
 
-const initialState: Project[] = [
-  {
-    id: 1,
-    displayName: 'TEST_PROJECT1',
-  },
-  {
-    id: 2,
-    displayName: 'TEST_PROJECT2',
-  },
-];
+const initialState: Project[] = [];
 
 const reducer: Reducer<ProjectState, ProjectActions> = (state = initialState, action) => {
   switch (action.type) {
-    case ActionTypes.SET:
-      return Object.assign({}, state, {
-        project: action.payload.project,
-      });
+    case ActionTypes.INITIALIZE:
+      return Object.assign([], state, action.payload.projects);
     default:
       return state;
   }

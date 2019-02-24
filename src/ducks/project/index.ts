@@ -1,5 +1,5 @@
-import { SetProjectAction } from './actions';
+import { InitializeProjectAction } from './actions';
 import reducers, { ProjectState } from './reducers';
 export default reducers;
 
-export { ProjectState, SetProjectAction };
+export { ProjectState, InitializeProjectAction };

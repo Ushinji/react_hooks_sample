@@ -1,6 +1,6 @@
 import { createContext, Dispatch as ReactDispatch } from 'react';
 import { combineReducers } from 'redux';
-import project, { ProjectState, SetProjectAction } from './project';
+import project, { InitializeProjectAction, ProjectState } from './project';
 
 export type Action<T extends string, P = void> = P extends {}
   ? {
@@ -11,7 +11,7 @@ export type Action<T extends string, P = void> = P extends {}
       type: Text;
     };
 
-export type Actions = SetProjectAction;
+export type Actions = InitializeProjectAction;
 
 export interface RootState {
   projectState: ProjectState;
